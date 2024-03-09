@@ -1,4 +1,6 @@
 from flask import Flask
+import os
+
 app = Flask(__name__)
 
 mongo_uri = os.getenv("MONGO_URI")
