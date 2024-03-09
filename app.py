@@ -12,7 +12,7 @@ collection = db['imageIds']
 
 @app.route('/')
 def hello_world():
-    return f'{mongo_uri}'
+    return 'hello'
 
 @app.route('/delete/<id>')
 def delete_data(id):
