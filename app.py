@@ -1,6 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import pymongo
 import os
+import time
+import requests
+
+
+
+def cron():
+    time.sleep(60)
+    requests.get('https://ig-0shi.onrender.com/add/cron test')
+
 
 
 app = Flask(__name__)
@@ -37,3 +46,6 @@ def add_data_caption(id, caption="#abstract"):
     data = {'id': id, 'caption': caption }
     collection.insert_one(data)
     return jsonify({'id': id, 'caption': caption})
+
+while True:
+    cron()
