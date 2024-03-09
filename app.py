@@ -21,7 +21,7 @@ def add_data(id, caption):
     return jsonify({'id': id, 'caption': caption})
 
 @app.route('/add/<id>/<caption>')
-def add_data(id, caption):
+def add_data_caption(id, caption):
     data = {'id': id, 'caption': caption }
     collection.insert_one(data)
     return jsonify({'id': id, 'caption': caption})
