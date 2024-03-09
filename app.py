@@ -7,7 +7,7 @@ import requests
 
 
 def cron():
-    time.sleep(60)
+    time.sleep(600)
     requests.get('https://ig-0shi.onrender.com/add/cron test')
 
 
