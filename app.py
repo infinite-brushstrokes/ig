@@ -6,9 +6,9 @@ import requests
 
 
 
-def cron():
-    time.sleep(600)
-    requests.get('https://ig-0shi.onrender.com/add/cron test')
+# def cron():
+#     time.sleep(600)
+#     requests.get('https://ig-0shi.onrender.com/add/cron test')
 
 
 
@@ -47,5 +47,11 @@ def add_data_caption(id, caption="#abstract"):
     collection.insert_one(data)
     return jsonify({'id': id, 'caption': caption})
 
-while True:
-    cron()
+# @app.route('/createigpost')
+# def create_ig_post():
+#     data = {'id': id, 'caption': caption }
+#     collection.insert_one(data)
+#     return jsonify({'id': id, 'caption': caption})
+
+# while True:
+#     cron()
