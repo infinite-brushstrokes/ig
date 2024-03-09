@@ -30,7 +30,7 @@ def delete_data(id):
 def add_data(id):
     data = {'id': id, 'caption': "#abstractart"}
     collection.insert_one(data)
-    return jsonify({'id': id, 'caption': caption})
+    return jsonify({'id': id, 'caption': "#abstractart" })
 
 @app.route('/add/<id>/<caption>')
 def add_data_caption(id, caption="#abstract"):
